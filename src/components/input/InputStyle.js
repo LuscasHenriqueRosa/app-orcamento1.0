@@ -1,8 +1,7 @@
 // InputStyle.js
-
 import styled from 'styled-components/native';
 
-const Container = styled.View`
+export const ContainerInput = styled.View`
   background-color: #2b3;
   align-items: center;
   justify-content: center;
@@ -11,12 +10,9 @@ const Container = styled.View`
   border-radius:7px ;
 `;
 
-const TextStyled = styled.Text`
+export const TextInput = styled.Text`
   font-size: 20px;
   color: #fff;
 `;
 
-export default {
-  Container,
-  TextStyled,
-};
+
