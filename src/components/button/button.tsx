@@ -1,6 +1,5 @@
 // button.tsx
 import React from 'react';
-import { View, Text } from 'react-native';
 import ButtonStyle from './buttonStyle'; // Importando o estilo
 
 const Button: React.FC = () => {
