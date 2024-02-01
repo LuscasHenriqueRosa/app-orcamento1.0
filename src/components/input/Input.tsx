@@ -1,6 +1,6 @@
 // input.tsx
 import React from 'react';
-import InputStyle from './inputStyle'; // Importando o estilo
+import InputStyle from './InputStyle'; // Importando o estilo
 
 const Input: React.FC = () => {
   return (
