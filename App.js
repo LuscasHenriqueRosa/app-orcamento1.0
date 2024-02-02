@@ -1,24 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import styled from 'styled-components/native';
-
- const Container = styled.View`
-  flex: 1;
-  background-color: #f2f;
-  align-items: center;
-  justify-content: center;
-`;
-
- const TextStyle = styled.Text`
-  font-size: 20px;
-  color: #fff;
-`;
+import { Container, Content, Logo } from './AppStyle';
 
 
 export default function App() {
   return (
     <Container>
-      <TextStyle>Hola</TextStyle>
+      <Content>
+      <Logo source={require('./assets/lUMACOST-removebg-preview.png')}
+      resizeMode="contain"></Logo>
+      </Content>
       <StatusBar style="auto" />
     </Container>
   );
