@@ -12,7 +12,6 @@ export const Container = styled(LinearGradient).attrs({
 `;
 
 export const Content = styled.View`
-  margin-top: 15%;
   align-items: center;
   justify-content: center;
   width: 100%;
