@@ -5,9 +5,10 @@ export const Container = styled(LinearGradient).attrs({
   colors: ['rgba(98, 98, 217, 1)', 'rgba(157, 98, 217, 1)'],
 })`
   flex: 1;
-  align-items: flex-start;
+  align-items: center;
+  justify-content:center;
   flex-direction: column;
-  padding: 5%;
+  
 `;
 
 export const Content = styled.View`
