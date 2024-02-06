@@ -26,15 +26,11 @@ export default function TelaCadastro() {
 
         <Content>
           <InputWithIcon 
-            placeholder="Digite aqui..." 
+            placeholder="Nome" 
             icon="people-sharp" 
           />
           <InputWithIcon 
-            placeholder="Digite aqui..." 
-            icon="people-sharp" 
-          />
-          <InputWithIcon 
-            placeholder="Digite aqui..." 
+            placeholder="E-mail" 
             icon="people-sharp" 
           />
           <InputWithIcon 
@@ -45,6 +41,18 @@ export default function TelaCadastro() {
             }}
             isPasswordVisible={!isLocked}
           />
+
+          <InputWithIcon 
+            placeholder="Comfirmar Senha" 
+            icon={isLocked ? 'lock-closed' : 'lock-open'}
+            onIconPress={() => {
+              toggleLock();
+            }}
+            isPasswordVisible={!isLocked}
+          />
+
+          <ButtonDefault title='Cadastrar'/>
+
         </Content>
       </ScrollView>
     </Container>

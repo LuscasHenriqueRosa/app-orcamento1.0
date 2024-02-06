@@ -3,10 +3,9 @@ import styled from 'styled-components/native';
 import { Platform } from 'react-native';
 
 export const ContainerButton = styled.View`
-width: 40%;
+min-width: 40%;
 background: rgba(35, 35, 54, 1);
 border-radius: 30px;
-flex-direction: Column;
 padding: 10px;
 align-items: center;
 gap: 5px;
@@ -26,7 +25,7 @@ margin-bottom:30px;
 `;
 
 export const TextStyled = styled.Text`
-  font-size: 30px;
+  font-size: 20px;
   color: #fff;
 `;
 
