@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { StatusBar, ScrollView } from 'react-native';
+import { StatusBar, ScrollView,TouchableOpacity, Text } from 'react-native';
 import { Container, Content, Logo } from '../../../AppStyle';
 import InputWithIcon from '../../components/inputs/inputWithIcon/InputWithIcon';
 import ButtonDefault from '../../components/button/button';
 
 
-export default function TelaCadastro() {
+export default function TelaCadastro({navigation}) {
   const [isLocked, setIsLocked] = useState(true);
 
   const toggleLock = () => {
@@ -52,6 +52,13 @@ export default function TelaCadastro() {
           />
 
           <ButtonDefault title='Cadastrar'/>
+          <Text style={{ color:'#fff'}}>Já possui uma conta?</Text>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Login')}
+            style={{ backgroundColor: 'transparent', marginBottom: 10 }}
+          >
+            <Text style={{ color:'rgba(35, 35, 54, 1)'}}>Fazer Log in</Text>
+          </TouchableOpacity>
 
         </Content>
       </ScrollView>

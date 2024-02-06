@@ -6,9 +6,7 @@ export const Container = styled(LinearGradient).attrs({
 })`
   flex: 1;
   align-items: center;
-  justify-content:center;
-  padding-top: 25%;
-  
+  justify-content:center;  
 `;
 
 export const Content = styled.View`

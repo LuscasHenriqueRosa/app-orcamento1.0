@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StatusBar, ScrollView, Button } from 'react-native';
+import { StatusBar, ScrollView, TouchableOpacity, Text } from 'react-native';
 import { Container, Content, Logo } from '../../../AppStyle';
 import InputWithIcon from '../../components/inputs/inputWithIcon/InputWithIcon';
 import ButtonDefault from '../../components/button/button';
@@ -40,10 +40,13 @@ export default function TelaLogin({navigation}) {
             isPasswordVisible={!isLocked} // Passar o estado para controlar a visibilidade da senha
           />
           <ButtonDefault title='Logar'/>
-            <Button 
-              title="Cadastrar-se"
-              onPress={ () => navigation.navigate('Cadastro') }
-            />
+
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Cadastro')}
+            style={{ backgroundColor: 'transparent', marginBottom: 10 }}
+          >
+            <Text style={{ color:'#fff'}}>Cadastrar-se</Text>
+          </TouchableOpacity>
         </Content>
       </ScrollView>
     </Container>
