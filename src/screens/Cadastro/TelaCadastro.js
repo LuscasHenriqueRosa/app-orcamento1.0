@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StatusBar, ScrollView,TouchableOpacity, Text } from 'react-native';
-import { Container, Content, Logo } from '../../../AppStyle';
+import { ContainerDefault, ContentDefault } from '../../components/layouts/BaseLayout';
+import { Logo } from '../../components/layouts/LogoStyleDefault';
 import InputWithIcon from '../../components/inputs/inputWithIcon/InputWithIcon';
 import ButtonDefault from '../../components/button/button';
 
@@ -13,18 +14,16 @@ export default function TelaCadastro({navigation}) {
   };
 
   return (
-    <Container>
-      <StatusBar style="auto" />
+    <ContainerDefault>
 
       <ScrollView showsVerticalScrollIndicator={false}>
-        <Content>
+        <ContentDefault>
           <Logo 
             source={require('../../../assets/LogolUMACOST.png')}
             resizeMode="contain"
           />
-        </Content>
 
-        <Content>
+
           <InputWithIcon 
             placeholder="Nome" 
             icon="people-sharp" 
@@ -43,7 +42,7 @@ export default function TelaCadastro({navigation}) {
           />
 
           <InputWithIcon 
-            placeholder="Comfirmar Senha" 
+            placeholder="Confirmar Senha" 
             icon={isLocked ? 'lock-closed' : 'lock-open'}
             onIconPress={() => {
               toggleLock();
@@ -60,8 +59,9 @@ export default function TelaCadastro({navigation}) {
             <Text style={{ color:'rgba(35, 35, 54, 1)'}}>Fazer Log in</Text>
           </TouchableOpacity>
 
-        </Content>
+        </ContentDefault>
       </ScrollView>
-    </Container>
+      <StatusBar style="auto" />
+    </ContainerDefault>
   );
 }
