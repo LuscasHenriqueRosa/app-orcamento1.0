@@ -7,7 +7,7 @@ export const Container = styled(LinearGradient).attrs({
   flex: 1;
   align-items: center;
   justify-content:center;
-  flex-direction: column;
+  padding-top: 25%;
   
 `;
 

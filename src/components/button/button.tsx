@@ -1,13 +1,26 @@
 // button.tsx
-import React from 'react';
-import {Container, TextStyled} from './ButtonStyle'; // Importando o estilo
+import React, { useState } from 'react';
+import {ContainerButton, TextStyled} from './buttonStyle'; // Importando o estilo
+import { TouchableOpacity } from 'react-native';
 
-const Button: React.FC = () => {
+
+interface ButtonDefaultProps{
+  title?: string;
+  
+}
+
+const ButtonDefault: React.FC<ButtonDefaultProps> = ({
+  title,
+
+}) => {
+
   return (
-    <Container>
-      <TextStyled>Hola</TextStyled>
-    </Container>
+    <ContainerButton>
+          <TouchableOpacity>
+           <TextStyled>{title}</TextStyled>
+          </TouchableOpacity>
+    </ContainerButton>
   );
 };
 
-export default Button;
+export default ButtonDefault;

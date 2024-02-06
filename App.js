@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { StatusBar, ScrollView } from 'react-native';
 import { Container, Content, Logo } from './AppStyle';
 import InputWithIcon from './src/components/inputs/inputWithIcon/InputWithIcon';
+import ButtonDefault from './src/components/button/button';
 
 export default function App() {
   const [isLocked, setIsLocked] = useState(true);
@@ -36,6 +37,8 @@ export default function App() {
             }}
             isPasswordVisible={!isLocked} // Passar o estado para controlar a visibilidade da senha
           />
+          <ButtonDefault title='Logar'/>
+
         </Content>
       </ScrollView>
     </Container>
