@@ -1,46 +1,20 @@
-import React, { useState } from 'react';
-import { StatusBar, ScrollView } from 'react-native';
-import { Container, Content, Logo } from './AppStyle';
-import InputWithIcon from './src/components/inputs/inputWithIcon/InputWithIcon';
-import ButtonDefault from './src/components/button/button';
+import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import TelaLogin from './src/screens/Login/TelaLogin';
+import TelaCadastro from './src/screens/Cadastro/TelaCadastro';
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const [isLocked, setIsLocked] = useState(true);
-
-  const toggleLock = () => {
-    setIsLocked(!isLocked);
-  };
 
   return (
-    <Container>
-      <StatusBar style="auto" />
-
-      {/* Utilizando ScrollView para adicionar scroll à tela */}
-      <ScrollView showsVerticalScrollIndicator={false}>
-        <Content>
-          <Logo 
-            source={require('./assets/lUMACOST-removebg-preview.png')}
-            resizeMode="contain"
-          />
-        </Content>
-
-        <Content>
-          <InputWithIcon 
-            placeholder="Digite aqui..." 
-            icon="people-sharp" 
-          />
-          <InputWithIcon 
-            placeholder="Senha" 
-            icon={isLocked ? 'lock-closed' : 'lock-open'}
-            onIconPress={() => {
-              toggleLock(); // Alternar o estado quando o ícone for pressionado
-            }}
-            isPasswordVisible={!isLocked} // Passar o estado para controlar a visibilidade da senha
-          />
-          <ButtonDefault title='Logar'/>
-
-        </Content>
-      </ScrollView>
-    </Container>
+    <NavigationContainer initialRouteName="Login">
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Login" component={TelaLogin} />
+        <Stack.Screen name="Cadastro" component={TelaCadastro}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
